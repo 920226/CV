@@ -7,7 +7,6 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
   <title>Tack!</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -318,6 +317,7 @@ audio::-webkit-media-controls-timeline
       <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
         aria-expanded="false" >Annat</a>
       <div class="dropdown-menu bg-dark ">
+        <span class="dropdown-item" id="daysleft" style="    font-weight: 900;" href="#">om födelsedag</span>
 
         <div class="dropdown-divider"></div>
         <span class="dropdown-item" style="    font-weight: 900;" href="#">www.murtaja.TK</span>
@@ -930,9 +930,17 @@ audio::-webkit-media-controls-timeline
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/jplayer/jquery.jplayer.min.js" integrity="sha512-g0etrk7svX8WYBp+ZDIqeenmkxQSXjRDTr08ie37rVFc99iXFGxmD0/SCt3kZ6sDNmr8sR0ISHkSAc/M8rQBqg==" crossorigin="anonymous"></script>
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
 <script>
+function shownr(){
+  $.notify({
+	// options
+	message: 'Jag saknar telefon' 
+},{
+	// settings
+	type: 'danger'
+});
+}
 var waitForEl = function(selector, callback) {
   if (jQuery(selector).length) {
     callback();
@@ -942,6 +950,33 @@ var waitForEl = function(selector, callback) {
     }, 100);
   }
 };
+
+function getBirthdayDateDifference() {
+    // Create user birthday date
+    var birthDayDate = 26;
+    var birthMonthDate = 2;
+    var birthdayYear = moment().format('YYYY');
+    var userBirthday = moment(birthdayYear + '-' + birthMonthDate + '-' + birthDayDate).format('DD/MM/YYYY');
+    // Get current date
+    var currentDate = moment().format('DD/MM/YYYY HH:mm:ss');
+    // Count time difference bettwen current date and user birthday
+    var milisecondsDifference = moment(userBirthday, "DD/MM/YYYY HH:mm:ss").diff( moment(currentDate, "DD/MM/YYYY HH:mm:ss") );
+    if (milisecondsDifference < 0) {
+      // Add one year to user birthday for positive difference 
+      birthdayYear = moment().add(1, 'years').format('YYYY');
+      userBirthday = moment(birthdayYear + '-' + birthMonthDate + '-' + birthDayDate).format('DD/MM/YYYY');
+      currentDate = moment().format('DD/MM/YYYY HH:mm:ss');
+      milisecondsDifference = moment(userBirthday,"DD/MM/YYYY HH:mm:ss").diff( moment(currentDate,"DD/MM/HH:mm:ss") );
+    }
+    // Get time duration between two dates
+    var differenceTimeDuration = moment.duration(milisecondsDifference);
+    // Return array with parameters
+    return(Math.round( differenceTimeDuration.asDays() ))
+ }
+ waitForEl("#daysleft", function() {
+  $("#daysleft")[0].innerText='födelsedag 🎈 om ' + getBirthdayDateDifference() +' dagar '
+ });
+
 waitForEl("#agenr", function() {
 
     dob = new Date("1992-02-26");
