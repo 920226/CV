@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Font Awesome -->
+  <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>Tack!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Cabin';
+      overflow: hidden;
+
+      background: url("background.jpg");
+      background-repeat: no-repeat;
+  background-size: 100% 100%;
+      color: white;
+    }
+
+    .nav {
+      background-color: #000000b8;
+    }
+
+    .fa {
+      padding: 20px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .far {
+      padding: 20px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .fab {
+      padding: 20px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+
+    /* Add a hover effect if you want */
+    .fa-facebook:hover {
+
+      color: white;
+      background: #164aba;
+      border-bottom: 1px solid white;
+
+    }
+
+    /* Set a specific color for each brand */
+
+    /* Facebook */
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+
+    /* Facebook */
+    .fa-envelope {
+      background: rgb(41, 41, 41);
+      color: white;
+      
+      border-bottom: 1px solid black;
+    }
+
+    .fa-envelope:hover {
+
+      color: white;
+      background: rgb(24, 24, 24);
+    }
+
+    .fa-phone {
+      background: rgb(41, 41, 41);
+      color: green;
+
+    }
+
+    /* Add a hover effect if you want */
+    .fa-phone:hover {
+      border-bottom: 1px solid white;
+
+      color: green;
+      background: rgb(24, 24, 24);
+    }
+
+
+    .fa-instagram{
+      background: rgb(41, 41, 41);
+      color: white;
+      background: #f09433; 
+background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    }
+
+    /* Add a hover effect if you want */
+    .fa-instagram:hover {
+      border-bottom: 1px solid white;
+
+      color: white;
+      background: #f09433; 
+background: -moz-linear-gradient(25deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+background: -webkit-linear-gradient(25deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+background: linear-gradient(25deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      background-color: #000000a3;
+      display:none;
+    }
+
+    .fa-twitter{
+      color:blue;
+    
+      background: rgb(41, 41, 41);
+    }
+
+    
+    .fa-twitter:hover {
+      border-bottom: 1px solid white;
+
+background: rgb(24, 24, 24);
+}
+
+.dropdown-item {
+    color: white!important;
+    background-color: unset!important;
+}
+.dropdown-item:hover {
+    background-color: black!important;
+}
+#v-pills-home{
+  background-color: #000000eb;
+}
+ #keys{
+   color:white;
+ }
+ .tab-pane{
+  padding:15px; 
+  background-color: rgba(0, 0, 0, 0.82);
+  overflow-y: auto;
+  height: 60vh;
+ }
+
+
+
+
+ .tab-pane::-webkit-scrollbar {
+  width: 1em;
+
+}
+ 
+.tab-pane::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+
+}
+ 
+.tab-pane::-webkit-scrollbar-thumb {
+  background-color: rgba(118, 3, 3, 0.783);
+  outline: 1px solid rgb(0, 0, 0);
+
+}
+
+.goog-logo-link {
+    display:none !important;
+} 
+    
+.goog-te-gadget{
+    color: transparent !important;
+}
+
+.skiptranslate {
+
+}
+.goog-te-combo{
+  background: black;
+    color: white;
+}
+.goog-tooltip {
+    display: none !important;
+}
+.goog-tooltip:hover {
+    display: none !important;
+}
+.goog-text-highlight {
+    background-color: transparent !important;
+    border: none !important; 
+    box-shadow: none !important;
+}
+
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+    } 
+body {
+    top: 0px !important; 
+    }
+    #agenr{
+      color: white;
+      font-family: system-ui;
+    font-size: 14px;
+    font-weight: 500;
+    }
+    .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #ff0000;
+
+    }
+
+
+
+
+audio {
+  background-color: #ffffff;
+    width: 165px;
+    filter: invert(1);
+      outline: none;
+
+    height: 25px;
+}
+audio::-webkit-media-controls-timeline
+{
+  display: none;
+}
+
+  </style>
+
+
+<meta charset="UTF-8">
+
+
+</head>
+
+<body style="background-color: black;">
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="notsupported" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content  text-white bg-dark">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Not supported</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <strong>This webrowser is not supported for presentation try </br> <b> Chrome Safari or Firefox!</b></strong>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <ul class="nav justify-content-center " > 
+
+    <li class="nav-item">
+      
+
+
+
+      <a class="nav-link notranslate" style=" font-family: cursive;       font-size: 20px;
+      font-weight: 600;   border-radius: .25rem; background-color: #000000a7;  color: red;  margin-right: 10px;" href="#">MURTAJA</a>
+    </li>
+    <li class="nav-item">
+      <a class="fa fa-twitter"  href="#"></a>
+    </li>
+    <li class="nav-item">
+      <a class="fab fa-instagram"  href="#"></a>
+    </li>
+    <li class="nav-item">
+      <a class="far fa-envelope"  href="#"></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link fa fa-facebook" href="#"></a>
+    </li>
+    <li class="nav-item">
+      <a class="fa fa-phone" aria-hidden="true"  href="#"></a>
+
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled "  style="	    color: blue;  font-size: 20px;   font-weight: 600;" id="agenr" >28 <span id="google_translate_element"> År</span> </a>
+    </li>
+    <li class="nav-item dropdown ">
+      <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+        aria-expanded="false" >Annat</a>
+      <div class="dropdown-menu bg-dark ">
+        <a class="dropdown-item" href="#">Github</a>
+
+        <a class="dropdown-item" href="#">IRC channel</a>
+        <div class="dropdown-divider"></div>
+        <span class="dropdown-item" style="    font-weight: 900;" href="#">www.murtaja.TK</span>
+      </div>
+    </li>
+  </ul>
+  
+  <div class="container"  id="google_translate_element">
+
+
+    <div class="row">
+
+      
+      <div class="col-sm-auto">
+        <div class="nav flex-column nav-pills" style="width: 150px;" id="v-pills-tab" role="tablist"
+          aria-orientation="vertical">
+    
+          <img src="logo.png" class="rounded mx-auto d-block card-img-top" alt="...">
+          <audio  autoplay controls>
+            <source src="lama.mp3" type="audio/mpeg">
+          </audio>
+
+        
+          <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+            aria-controls="v-pills-home" aria-selected="true">Om mig</a>
+          <a class="nav-link" style="display: none;" id="v-pills-presentation-tab" data-toggle="pill" href="#v-pills-presentation" role="tab"
+            aria-controls="v-pills-presentation" aria-selected="false">Presentation</a>
+          <a class="nav-link" id="v-pills-ningshistorik-tab" data-toggle="pill" href="#v-pills-ningshistorik" role="tab"
+            aria-controls="v-pills-ningshistorik" aria-selected="false">Anställningshistorik</a>
+            <a class="nav-link" id="v-pills-Kvalifikationer-tab" data-toggle="pill" href="#v-pills-Kvalifikationer" role="tab"
+              aria-controls="v-pills-Kvalifikationer" aria-selected="false">Kvalifikationer</a>
+              <a class="nav-link" id="v-pills-information-tab" data-toggle="pill" href="#v-pills-information" role="tab"
+                aria-controls="v-pills-information" aria-selected="false">Information</a>
+                <a class="nav-link" id="v-pills-irc-tab" data-toggle="pill" href="#v-pills-irc" role="tab"
+                  aria-controls="v-pills-irc" aria-selected="false">IRC</a>
+        </div>
+      </div>
+      
+      <div class="col" style="height: 380px;">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-home"  role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <h1> <span class="notranslate"> 🐱‍👤</span>Välkommen </h1>
+
+            
+<div>
+  <div>
+      <p>
+          Personliga profil
+          <br/>
+          En väluppfostrad, samvetsgrann individ som kommunicerar effektivt
+          med människor på alla
+          <br/>
+          nivåer. Smart och presentabel, med förmåga att arbeta i ett team
+          eller individuellt för att leverera och behålla en hög standard på
+          service i varje aspekt av verksamheten. har den nödvändiga
+          entusiasm, enhet och motivation som krävs för att lyckas, skulle
+          vara en tillgång för alla arbetsgivare som respekterar lojalitet
+          och ansvar. Med en bred kunskap inom teknik, håller utmärkt känsla
+          för detaljer söker en ny position, för en vidare karriärutveckling.
+      </p>
+  </div>
+  <div>
+      <p>
+      </p>
+  </div>
+  <div>
+      <ul>
+          <li>
+              <p>
+                  Viktiga kunskaper
+              </p>
+          </li>
+          <li>
+              <p>
+                  Upplevt i en mängd olika I.T. stöd
+              </p>
+          </li>
+          <li>
+              <p>
+                  Personlig service
+              </p>
+          </li>
+      </ul>
+  </div>
+</div>
+<div>
+  <div>
+      <ul>
+          <li>
+              <p>
+                  Kundservice samt försäljning
+              </p>
+          </li>
+          <li>
+              <p>
+                  IT-kompetens
+              </p>
+          </li>
+          <li>
+              <p>
+                  En flexibel och anpassningsbar attityd
+              </p>
+          </li>
+          <li>
+              <p>
+                  Talar arabiska, engelska, samt Svenska
+              </p>
+          </li>
+      </ul>
+  </div>
+
+</div>
+</div>
+          <div class="tab-pane fade" id="v-pills-presentation" style="display: none;background: unset;" role="tabpanel" aria-labelledby="v-pills-presentation-tab">
+              <iframe src="1.html" id="presentationifr" style="width:100%;height: 300px;" frameborder="0"></iframe>    <!----> 
+         
+          </div>
+          <div class="tab-pane fade" id="v-pills-ningshistorik" role="tabpanel"  aria-labelledby="v-pills-ningshistorik-tab">
+            <div>
+              <h3>
+                  Anställningshistorik
+              </h3>
+          </div>
+            <div>
+              <div>
+                  <p>
+                  </p>
+              </div>
+              <div>
+                  <p>
+                     <b> 2018.07-10 Äldreboende ,Sundsvall kommun </b> 
+                  </p>
+              </div>
+              <div>
+                  <ul>
+                      <li>
+                          <p>
+                              Hlälpa vårda boende med personlig assistens
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              Personlig vård Hygien
+                          </p>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <p>
+                  </p>
+              </div>
+            </div>
+            <div>
+              <p>
+                <b>    2018.05.25 Brand Impact,Varumärke Reklam butikbiträde </b>
+            </p>
+              <div>
+            
+                  <ul>
+  
+                      <li>
+                          <p>
+                              svara på kundernas frågor om olika varor och ge kunden råd
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              bemöta kunderna väl, plocka/städa, erbjuda och fronta
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              skyltning och dekorationer i butiken
+                              <br/>
+                          </p>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <p>
+                    <b>    2017 – 2018 Personlig Assistent, Stöd och service </b>
+                  </p>
+              </div>
+            </div>
+            <div>
+              <div>
+                  <ul>
+                      <li>
+                          <p>
+                              Ge alla rätt förutsättningar för att utföra vardagssysslor
+                              i hemmet,
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              Matlagning och dagliga rutiner
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              Personligt utformat stöd
+                          </p>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <p>
+                  </p>
+              </div>
+              <div>
+                  <p>
+                    <b>     2016 – 2017 Sweet East, utåtriktad butikförsäljning </b>
+                  </p>
+              </div>
+            </div>
+            <div>
+              <div>
+                  <ul>
+                      <li>
+                          <p>
+                              Ansvarar för att erbjuda smakprov samt försäljning av varor
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              Berätta om produkter och representera Sweet East
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              Hantera kassasystem samt POS betalningar
+                          </p>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <p>
+                  </p>
+              </div>
+              <div>
+                  <p>
+                    <b>      2015 – 2016 Stjärna Fyrkant, försäljning kundtjänst
+                      telefonförsäljare SV    </b>  
+                  </p>
+              </div>
+            </div>
+            <div>
+              <div>
+                  <ul>
+                      <li>
+                          <p>
+                              Arbeta inom försäljning telekomlösning samt installation
+                              och service
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              Kundtjänst och support inom data , telefoni
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              Abonnemang frågor och konfiguration
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              ansvarade för registrering i databas samt bevakning
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              Mitt arbete innebar fokus på kundbearbetning uppföljning
+                              och försäljning.
+                          </p>
+                      </li>
+                  </ul>
+              </div>
+            </div>
+            <div>
+              <p>
+              </p>
+            </div>
+            <div>
+              <p>
+              </p>
+            </div>
+            <div>
+              <p>
+              </p>
+            </div>
+            <div>
+              <p>
+              </p>
+            </div>
+            <div>
+              <p>
+              </p>
+            </div>
+            <div>
+              <div>
+                  <p>
+                    <b>      2013 – 2015 SCC Tech, Assistant Manager, försäljning UK    </b>  
+                  </p>
+              </div>
+              <div>
+                  <ul>
+                      <li>
+                          <p>
+                              Närmar sig kunden och att hjälpa dem med deras behov
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              Bistå ledningen i maximera försäljningen och lönsamheten
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              Att upprätthålla renligheten i butiken hela tiden
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              Uppdatering och påfyllning inom vissa områden och lager
+                          </p>
+                      </li>
+                  </ul>
+              </div>
+            </div>
+            <div>
+              <div>
+                  <ul>
+                      <li>
+                          <p>
+                              Programmering upplägg av webbtjänster
+                          </p>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <p>
+                  </p>
+              </div>
+              <div>
+                  <p>
+                    <b>       2012 – 2013 Cartige house, Assistant Manager, försäljning UK    </b>  
+                  </p>
+              </div>
+              <div>
+                  <ul>
+                      <li>
+                          <p>
+                              Hantera och främja tjänster av butiken
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              Att tillhandahålla databas stöd till olika butiker
+                          </p>
+                      </li>
+                  </ul>
+              </div>
+            </div>
+            <div>
+              <div>
+                  <ul>
+                      <li>
+                          <p>
+                              Allmänt I.T. stöd
+                          </p>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <p>
+                  </p>
+              </div>
+              <div>
+                  <p>
+                    <b>       2010 – 2012 BNI computer, I.T. tekniker UK    </b>  
+                  </p>
+              </div>
+              <div>
+                  <ul>
+                      <li>
+                          <p>
+                              Fastställande datorer för butiker – inklusive bärbara
+                              datorer, stationära datorer
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              Återvinning och reparation av datorer och bärbara datorer
+                              från skolor och företag
+                          </p>
+                      </li>
+                  </ul>
+              </div>
+            </div>
+            <div>
+              <div>
+                  <ul>
+                      <li>
+                          <p>
+                              Kontakter med olika företag, beställning av delar och frakt
+                              utomlands
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              Reparera med Fjärrskrivbord
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              Byggnaden skräddarsydda datorer
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              Med hjälp av fotoaffär och CAD
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              Hantera licensiering och ansökningar
+                              <br/>
+                          </p>
+                      </li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-Kvalifikationer" style="padding:30px;" role="tabpanel" aria-labelledby="v-pills-Kvalifikationer-tab">
+            <div>
+              <p>
+                <b>   Områden erfarenhet </b>
+                  <br/>
+                  ⦁ Fjärrstöd
+                  <br/>
+                  ⦁ Kundtjänst
+                  <br/>
+                  ⦁ Programmering (QML, C#, .NET)
+                  <br/>
+                  ⦁ Office Paket
+                  <br/>
+                  ⦁ Felsökning samt reparation
+              </p>
+            </div>
+            <div>
+              <p>
+                <b>   Kvalifikationer </b>
+                  <br/> 
+                  ⦁ Foundation Degree i ICT-
+                  <br/>
+                  ⦁ ECDL dator licens
+                  <br/>
+                  ⦁ HCI Nivå 3 (HC Interaction)
+                  <br/>
+                  ⦁ Business studier nivå 2
+                  <br/>
+                  ⦁ En nivåer i Science (A), matematik (B), engelska(A)-Multimedia (A)
+              </p>
+            </div>
+          </div>
+          
+          <div class="tab-pane fade" style="overflow: hidden;" id="v-pills-irc" role="tabpanel" aria-labelledby="v-pills-irc-tab">
+            <iframe src="/irc" id="presentationifr" style="width:100%;height: 100%;" frameborder="0"></iframe>
+          </div>
+          <div class="tab-pane fade" id="v-pills-irc" role="tabpanel" aria-labelledby="v-pills-irc-tab">
+            <div>
+              <p>
+               <b>   Intressen </b> 
+                  <br/>
+                  Jag njuter av läsande, forska och att vara kreativ. Jag gillar också
+                  sporter så som basket.
+              </p>
+            </div>
+            <div>
+              <p>
+                  Referenser finns på begäran
+                  <br/>
+                  <br/>
+              </p>
+            </div>
+            <div>
+              <p>
+              </p>
+            </div>
+            <div>
+              <p>
+              </p>
+            </div>
+            <div>
+              <p>
+              </p>
+            </div>
+            <div>
+              <p>
+                <b>   Tekniker </b>
+              </p>
+            </div>
+            <div>
+              <p>
+                  Som IT-tekniker har jag arbetat med programmering, maskinvara, telefon-
+                  / datasupport
+              </p>
+            </div>
+            <div>
+              <p>
+                  Har tillhandahållit support i problemanalys och felsökning av olika
+                  Windows Linux-infrastruktur har erfarenhet i nätverksadministration,
+                  Fjärrassistans samt utveckling av webbapplikationer inom Microsoft .net
+                  familjen. Jag är Målinriktag har snabb inlärningsförmåga och följer en
+                  strategisk team services process i visual studio. Jag har stor teknisk
+                  kunskap och bred IT-kompetens, med kunskap av verktyg som Visual
+                  Studio, Microsoft Office, Gimp och även andra grafiska
+                  kommunikationsprogram. Min känsla för detaljer, och förmåga att hitta
+                  nya och okonventionella lösningar, säkerställer att varje projekt jag
+                  arbetar på utförs exakt som tänkt och med högsta möjliga standard. Jag
+                  tycker om att arbeta i ett team, men kan även arbeta självständigt.
+              </p>
+            </div>
+            <div>
+              <p>
+              <b>   Kundservice Försäljning Telefon </b> 
+              </p>
+            </div>
+            <div>
+              <p>
+                  En av mina främsta uppgifter på stjärna fyrkant var att arbeta
+                  utåtriktat med högklassig service. bemöta våra kunder med en lösning
+                  för att skapa och utveckla långsiktiga kundrelationer i min roll ingick
+                  det att vara en produkt försäljare ansvara för att skapa nya affärer
+                  genom aktivt förbättra kundens varor och abonnemang. Min uppgift var
+                  att vägleda och hjälpa kunden med tekniskt stöd för alla telefon och
+                  data kunder. Har god förmåga att identifiera olika kunders behov för
+                  att uppnå förstklassig service. Hanterar även inkommande incidenter via
+                  telefon, e-post för att snabbt och effektiv sätt och diagnostisera ett
+                  brett spektrum av tekniska problem och hanterar ärenden i
+                  affärssystemet CRM för att säkra leveranser. Mina verbala
+                  kommunikationskompentenser och positiva attityd leder till effektiv
+                  kommunikation med alla kunder.
+              </p>
+            </div>
+            <div>
+              <p>
+                <b>      Personlig assistent </b>
+              </p>
+            </div>
+            <div>
+              <p>
+                  Energetisk, motiverad personlig assistent som är mycket organiserad och
+                  skicklig för att balansera behoven hos kunder i både personlig och
+                  professionell förmåga. Stark arbetsetik och positiv attityd. Mycket
+                  effektiv i snabba arbetsmiljöer. Noggrann och anpassningsbar.
+              </p>
+            </div>
+            <div>
+              <p>
+                <b>      Om mig </b>
+              </p>
+            </div>
+            <div>
+              <p>
+                  Noggrannhet och effektivitet är mina ledord. Jag har lång erfarenhet av
+                  olika sorters kunskap och har stor förmåga att snabbt växla fokus vid
+                  behov och ser prestigelöst på innehållet i mitt arbete.
+              </p>
+            </div>
+            <div>
+              <p>
+                  Dessutom har jag stor vana vid arbete i högt tempo som ofta inneburit
+                  stor förmåga till prioritering.
+              </p>
+            </div>
+            <div>
+              <p>
+              </p>
+            </div>
+            <div>
+              <p>
+              </p>
+            </div>
+            <div>
+              <p>
+                  <br/>
+              </p>
+            </div>
+            
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer" style="display:none;">
+    <div class="container">
+      <span class="text-muted"> </span>
+    </div>
+  </footer>
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"
+  integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/jplayer/jquery.jplayer.min.js" integrity="sha512-g0etrk7svX8WYBp+ZDIqeenmkxQSXjRDTr08ie37rVFc99iXFGxmD0/SCt3kZ6sDNmr8sR0ISHkSAc/M8rQBqg==" crossorigin="anonymous"></script>
+
+
+<script>
+var waitForEl = function(selector, callback) {
+  if (jQuery(selector).length) {
+    callback();
+  } else {
+    setTimeout(function() {
+      waitForEl(selector, callback);
+    }, 100);
+  }
+};
+waitForEl("#agenr", function() {
+
+    dob = new Date("1992-02-26");
+var today = new Date();
+var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
+$("#agenr")[0].innerText=age +' år'
+});
+
+  function fixsize(){
+    var x,y;
+if (self.innerHeight) // all except Explorer
+{
+  x = self.innerWidth;
+  y = self.innerHeight;
+}
+else if (document.documentElement && document.documentElement.clientHeight)
+// Explorer 6 Strict Mode
+{
+  x = document.documentElement.clientWidth;
+  y = document.documentElement.clientHeight;
+}
+else if (document.body) // other Explorers
+{
+  x = document.body.clientWidth;
+  y = document.body.clientHeight;
+}
+
+
+$(".tab-pane").css("height",y-100)
+waitForEl("#presentationifr", function() {
+
+  $("#v-pills-presentation").css("display","none");
+$("#presentationifr").css("height",y-100)
+});
+  }
+  function show(){
+    $('#v-pills-presentation').css('display','unset');
+    $('#v-pills-presentation-tab').css('display','unset');
+  }
+  function myFunction() { 
+     if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) 
+    {
+      $('#notsupported').modal()
+
+    }
+    else if(navigator.userAgent.indexOf("Chrome") != -1 )
+    {
+      show();
+    }
+    else if(navigator.userAgent.indexOf("Safari") != -1)
+    {      show();
+
+    }
+    else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
+    {      show();
+
+    }
+    else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
+    {       
+      $('#notsupported').modal()
+
+
+    }  
+    else 
+    {
+      $('#notsupported').modal()
+
+    }
+    }
+    myFunction();
+    fixsize();
+  </script>
+
+    
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'se', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+  }
+</script>
+
+<script>
+$('.nav-link').on('click', function (e) {
+ if (e.target.id == "v-pills-presentation-tab") {
+   $("#v-pills-presentation").css("display","unset");
+ } else {
+  $("#v-pills-presentation").css("display","none");
+   
+ }
+  e.preventDefault()
+})
+</script>
+  </html>
+  
+</html>
