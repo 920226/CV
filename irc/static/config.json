@@ -20,7 +20,7 @@
         "server":"irc.techtronix.net",
         "port":6697,
         "tls":true,
-        "channel": "#murre-default",
+        "channel": "#pnode",
         "nick": "murre-n?"
     },
     "embedly": {
