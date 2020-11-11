@@ -317,7 +317,7 @@ audio::-webkit-media-controls-timeline
       <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
         aria-expanded="false" >Annat</a>
       <div class="dropdown-menu bg-dark ">
-        <span class="dropdown-item" id="daysleft" style="    font-weight: 900;" href="#">om födelsedag</span>
+        <span class="dropdown-item" id="daysleft" style="   color:#b8f5ff!important; font-weight: 900;" href="#">om födelsedag</span>
 
         <div class="dropdown-divider"></div>
         <span class="dropdown-item" style="    font-weight: 900;" href="#">www.murtaja.TK</span>
@@ -973,15 +973,18 @@ function getBirthdayDateDifference() {
     // Return array with parameters
     return(Math.round( differenceTimeDuration.asDays() ))
  }
+
+ dob = new Date("1992-02-26");
+var today = new Date();
+var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
  waitForEl("#daysleft", function() {
-  $("#daysleft")[0].innerText='födelsedag 🎈 om ' + getBirthdayDateDifference() +' dagar '
+   
+  $("#daysleft")[0].innerText=(age+1) + ' 🎈 om ' + getBirthdayDateDifference() +' dagar '
  });
 
 waitForEl("#agenr", function() {
 
-    dob = new Date("1992-02-26");
-var today = new Date();
-var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
+
 $("#agenr")[0].innerText=age +' år'
 });
 
