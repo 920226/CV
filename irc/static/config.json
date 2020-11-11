@@ -1,7 +1,7 @@
 {
     "windowTitle": "Chat with murtaja",
     "startupScreen": "welcome",
-    "kiwiServer": "https://do-e.clients.kiwiirc.com/webirc/kiwiirc/",
+    "kiwiServer": "https://p-node.org:7778/webirc/kiwiirc/?sid=38hizctsh2g4s&p=1",
     "restricted": false,
     "theme": "Dark",
     "themes": [
