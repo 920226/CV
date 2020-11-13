@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
     integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
     crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
   <style>
@@ -374,7 +375,7 @@
           <a class="nav-link" id="v-pills-irc-tab" data-toggle="pill" href="#v-pills-irc" role="tab"
             aria-controls="v-pills-irc" aria-selected="false">IRC Chat</a>
 
-            <a class="nav-link" id="v-pills-music-tab" data-toggle="pill" href="#v-pills-music" role="tab"
+          <a class="nav-link" id="v-pills-music-tab" data-toggle="pill" href="#v-pills-music" role="tab"
             aria-controls="v-pills-music" aria-selected="true">Musik</a>
 
         </div>
@@ -978,6 +979,10 @@
   integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
   crossorigin="anonymous"></script>
 
+<script src="https://apis.google.com/js/api.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
 
 <script>
   function shownr() {
@@ -1111,61 +1116,87 @@
   $('.nav-link').on('click', function (e) {
     if (e.target.id == "v-pills-presentation-tab") {
       $("#v-pills-presentation").css("display", "unset");
-    } else {
+    } 
+    else if (e.target.id == "v-pills-music-tab") {
+      ytload();
+      ytload();
+    }
+      else {
       $("#v-pills-presentation").css("display", "none");
 
     }
     e.preventDefault()
-  })
-  
+  });
+
 </script>
 <script>
 
+function ytload(){
   
-$(document).ready(function() {
+$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+  disableOn: 700,
+  type: 'iframe',
+  mainClass: 'mfp-fade',
+  removalDelay: 160,
+  preloader: true,
 
-  // <a class="popup-youtube" href="https://www.youtube.com/watch?v=8v_4O44sfjM">Christina Perri - Jar of Hearts [Official Music Video]            </a>
-  var scjmp=0;
+  fixedContentPos: false
 
-  var substr = [
-   '8v_4O44sfjM','Christina Perri - Jar of Hearts [Official Music Video] '
-  ,'qbjwT1uZrWA'  ,'Sia - Sing For My Life'
-  ,'a2giXO6eyuI'  ,'Set Fire To The Rain '
-  ,'n106Qo0D948'  ,'Of Monsters and Men - Hunger (Official Lyric Video)'
-  ,'9x0qWUf6QQk','Classified - Having Kids Is Easy'
-
-
-
-  ,'xoPcSFewpU','HARAKAT TRAP MOSH SKITS POETRY'
-  ,'eJnQBXmZ7Ek','The Script - If You Could See Me Now'
-  ,'ZSM3w1v-A_Y','Timbaland - Apologize ft. OneRepublic'
-  ,'mer6X7nOY_o','Lily Allen | Somewhere Only We Know '
-  ,'ZS0WvzRVByg','George Ezra - Listen to the Man'
-  ,'FGBhQbmPwH8','Daft Punk - One More Time'
-  ,'h61QG4s0I3U','The Supermen Lovers (feat. Mani Hoffman)'
-  ,'qmsbP13xu6k','Mr Oizo - Flat beat '
-  ,'DLbqnmvLPKE','Grandson - Bury Me Face Down'
-
-];
-
-$.each(substr , function(index, val) { 
-  console.log(index, val)
-  if (scjmp == 0) {
-  $("#v-pills-music").append('</br><a class="popup-youtube" href="https://www.youtube.com/watch?v='+val+'">'+substr[index+1]+'           </a>');
-    scjmp = 1; } else { scjmp=0;  }
 });
-        $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-          disableOn: 700,
-          type: 'iframe',
-          mainClass: 'mfp-fade',
-          removalDelay: 160,
-          preloader: true,
-          
-          fixedContentPos: false
-          
-        });
-      });
-    
+}
+    // <a class="popup-youtube" href="https://www.youtube.com/watch?v=8v_4O44sfjM">Christina Perri - Jar of Hearts [Official Music Video]            </a>
+
+    var substr = [
+      '8v_4O44sfjM'
+      , 'qbjwT1uZrWA'
+      , 'a2giXO6eyuI'
+      , 'n106Qo0D948'
+      , '9x0qWUf6QQk'
+
+      , 'xoPcSFewpU'
+      , 'eJnQBXmZ7Ek'
+      , 'ZSM3w1v-A_Y'
+      , 'mer6X7nOY_o'
+      , 'ZS0WvzRVByg'
+      , 'h61QG4s0I3U'
+      , 'FGBhQbmPwH8'
+      , '9bZkp7q19f0'
+      , 'qmsbP13xu6k'
+      , 'pd9Jbs2UsTU'
+      , 'YGpak_xS47o'
+      , 'DLbqnmvLPKE'
+    ];
+
+
+
+    function getuinfo(id) {
+
+fetch("https://www.googleapis.com/youtube/v3/videos?id="+id+"&key=AIzaSyCi-UckgkNjRAx9Wqi2Q02MQMZ-IrhnGwg&part=snippet")
+  .then(res => res.json())
+  .then((out) => {
+    console.log('Output: ', out);
+    return out.items[0].channelTitle ;
+  }).catch(err => console.error(err));
+  return "INGEN TITEL" ;
+
+//return result.items[0].channelTitle ;
+
+}
+
+    $.each(substr, function (index, val) {
+      var titel = "";
+      fetch("https://www.googleapis.com/youtube/v3/videos?id="+val+"&key=AIzaSyCi-UckgkNjRAx9Wqi2Q02MQMZ-IrhnGwg&part=snippet")
+      .then(res => res.json())
+      .then((out) => {
+        titel = out.items[0].snippet.localized.title;
+      $("#v-pills-music").append('</br><a class="popup-youtube" href="https://www.youtube.com/watch?v=' + val + '">' + titel + '      </a>');
+
+      }).catch(err => console.error(err));
+      titel =  "INGEN TITEL" ;
+
+    });
+ 
+
 </script>
 
 </html>
