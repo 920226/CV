@@ -384,7 +384,6 @@
         <div class="tab-content" id="v-pills-tabContent">
 
           <div class="tab-pane fade show" id="v-pills-music" role="tabpanel" aria-labelledby="v-pills-music-tab">
-            <a class="popup-youtube" href="https://www.youtube.com/watch?v=8v_4O44sfjM">Christina Perri - Jar of Hearts [Official Music Video]            </a>
           </div>
 
           <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
@@ -1125,7 +1124,36 @@
   
 $(document).ready(function() {
 
-  
+  // <a class="popup-youtube" href="https://www.youtube.com/watch?v=8v_4O44sfjM">Christina Perri - Jar of Hearts [Official Music Video]            </a>
+  var scjmp=0;
+
+  var substr = [
+   '8v_4O44sfjM','Christina Perri - Jar of Hearts [Official Music Video] '
+  ,'qbjwT1uZrWA'  ,'Sia - Sing For My Life'
+  ,'a2giXO6eyuI'  ,'Set Fire To The Rain '
+  ,'n106Qo0D948'  ,'Of Monsters and Men - Hunger (Official Lyric Video)'
+  ,'9x0qWUf6QQk','Classified - Having Kids Is Easy'
+
+
+
+  ,'xoPcSFewpU','HARAKAT TRAP MOSH SKITS POETRY'
+  ,'eJnQBXmZ7Ek','The Script - If You Could See Me Now'
+  ,'ZSM3w1v-A_Y','Timbaland - Apologize ft. OneRepublic'
+  ,'mer6X7nOY_o','Lily Allen | Somewhere Only We Know '
+  ,'ZS0WvzRVByg','George Ezra - Listen to the Man'
+  ,'FGBhQbmPwH8','Daft Punk - One More Time'
+  ,'h61QG4s0I3U','The Supermen Lovers (feat. Mani Hoffman)'
+  ,'qmsbP13xu6k','Mr Oizo - Flat beat '
+  ,'DLbqnmvLPKE','Grandson - Bury Me Face Down'
+
+];
+
+$.each(substr , function(index, val) { 
+  console.log(index, val)
+  if (scjmp == 0) {
+  $("#v-pills-music").append('</br><a class="popup-youtube" href="https://www.youtube.com/watch?v='+val+'">'+substr[index+1]+'           </a>');
+    scjmp = 1; } else { scjmp=0;  }
+});
         $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
           disableOn: 700,
           type: 'iframe',
