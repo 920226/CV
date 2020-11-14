@@ -1158,7 +1158,6 @@ $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
       , 'a2giXO6eyuI'
       , 'n106Qo0D948'
       , '9x0qWUf6QQk'
-      , 'xoPcSFewpU'
       , 'eJnQBXmZ7Ek'
       , 'ZSM3w1v-A_Y'
       , 'mer6X7nOY_o'
@@ -1170,9 +1169,6 @@ $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
       , 'pd9Jbs2UsTU'
       , 'YGpak_xS47o'
       , 'DLbqnmvLPKE'
-
-
-      
       , 'y79oX6hSRAQ'
       , 'eM1Xi_uUUtQ'
       , 'GlqXlo9wdk0'
@@ -1191,7 +1187,6 @@ $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
       , 'wtLooNUmc2k'
       , '_irUgzFOJZs'
       , 'ey8T4pDmSQw'
-      , 'tPcc1ftj8E'
       , '2jhQt7TVfHw'
       , '3pshmKlWWjs'
       , '3E6b3mLu4YI'
@@ -1199,7 +1194,6 @@ $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
       , 'OO18F4aKGzQ'
       , '_WrMzFlLk7Q'
       , 'dJcpAnXHByA'
-      , 'yxs3T7YbYY'
       , '6VuuTeZq2uM'
       , 'bBbdod-_C7E'
       , '43gm3CJePn0'
@@ -1256,8 +1250,10 @@ fetch("https://www.googleapis.com/youtube/v3/videos?id="+id+"&key=AIzaSyCi-Uckgk
   .then((out) => {
     console.log('Output: ', out);
     return out.items[0].channelTitle ;
-  }).catch(err => console.error(err));
-  return "fel - INGEN TITEL" ;
+  }).catch(err => {
+return "error not recieve video title"
+  });
+  
 
 //return result.items[0].channelTitle ;
 
@@ -1271,9 +1267,10 @@ fetch("https://www.googleapis.com/youtube/v3/videos?id="+id+"&key=AIzaSyCi-Uckgk
         titel = out.items[0].snippet.localized.title;
       $("#v-pills-music").append('</br><a class="popup-youtube" href="https://www.youtube.com/watch?v=' + val + '">' + titel + '      </a>');
 
-      }).catch(err => console.error(err));
-      titel =  "INGEN TITEL" ;
+      }).catch(err => {
+        console.log(val + " Video not found")
 
+  });
     });
  
 
