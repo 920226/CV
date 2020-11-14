@@ -1298,7 +1298,10 @@ return "error not recieve video title"
         console.log(val + " Video not found")
 
   });
-  ytload();
+  window.setTimeout(function(){
+    ytload();
+
+}, 3000);
 
     });
  
