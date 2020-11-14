@@ -1267,7 +1267,6 @@ $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
 fetch("https://www.googleapis.com/youtube/v3/videos?id="+id+"&key=AIzaSyCi-UckgkNjRAx9Wqi2Q02MQMZ-IrhnGwg&part=snippet")
   .then(res => res.json())
   .then((out) => {
-    console.log('Output: ', out);
     return out.items[0].channelTitle ;
   }).catch(err => {
 return "error not recieve video title"
@@ -1285,7 +1284,6 @@ return "error not recieve video title"
       .then((out) => {
         titel = out.items[0].snippet.localized.title;
 
-
         $("#v-pills-music").append( `
         <div class="card popup-youtube"   href="https://www.youtube.com/watch?v=` + val + `">
   <img class="card-img-top" src="https://img.youtube.com/vi/`+val+`/0.jpg" alt="Card image cap">
@@ -1295,7 +1293,13 @@ return "error not recieve video title"
 `);
 
       }).catch(err => {
-        console.log(val + " Video not found")
+        $("#v-pills-music").append( `
+        <div class="card popup-youtube"   href="https://www.youtube.com/watch?v=` + val + `">
+  <img class="card-img-top" src="https://img.youtube.com/vi/`+val+`/0.jpg" alt="Card image cap">
+  <div class="card-body">
+     </div>
+</div>
+`);
 
   });
   window.setTimeout(function(){
