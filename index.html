@@ -268,6 +268,12 @@
     audio::-webkit-media-controls-timeline {
       display: none;
     }
+
+
+    .card{
+      background-color:rgba(0, 0, 0, 0.746);
+      color:white;
+    }
   </style>
 
 
@@ -1213,6 +1219,7 @@ $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
       , 't7tq5lKj5PM'
       , '01xPD1Krjv0'
       , 'eXvBjCO19QY'
+      , '-xoPcSFewpU'
       , 'n_mV6RCYbw4'
       , 'Ddww8IfRsvg'
       , 'nUrLwLD_bQs'
@@ -1264,14 +1271,22 @@ return "error not recieve video title"
       .then(res => res.json())
       .then((out) => {
         titel = out.items[0].snippet.localized.title;
-        $("#v-pills-music").append('<img class="img-thumbnail" src="https://img.youtube.com/vi/'+val+'/0.jpg">');
 
-      $("#v-pills-music").append('</br><a class="popup-youtube" href="https://www.youtube.com/watch?v=' + val + '">' + titel + '      </a>');
+
+        $("#v-pills-music").append(        `
+        <div class="card">
+  <img class="card-img-top" src="https://img.youtube.com/vi/`+val+`/0.jpg" alt="Card image cap">
+  <div class="card-body">
+    <a class="popup-youtube" href="https://www.youtube.com/watch?v=` + val + `">` + titel + `     </a>  </div>
+</div>
+`);
 
       }).catch(err => {
         console.log(val + " Video not found")
 
   });
+  ytload();
+
     });
  
 
