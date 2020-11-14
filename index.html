@@ -343,13 +343,13 @@
       <a class="fab fa-instagram" href="https://www.instagram.com/zotterholmes/" target="_blank"></a>
     </li>
     <li class="nav-item">
-      <a class="far fa-envelope" onclick="shownr();"></a>
+      <a class="far fa-envelope" onclick="showmail();"></a>
     </li>
     <li class="nav-item">
       <a class="nav-link fa fa-facebook" href="https://www.facebook.com/paxl1d/" target="_blank"></a>
     </li>
     <li class="nav-item">
-      <a class="fa fa-phone" aria-hidden="true" href="#"></a>
+      <a class="fa fa-phone"  onclick="shownr();" aria-hidden="true" href="#"></a>
 
     </li>
     <li class="nav-item">
@@ -1010,6 +1010,12 @@
 
 <script>
   function shownr() {
+    var notify = $.notify('saknar telefon nummer', 
+    { allow_dismiss: true,	type: 'danger', 	timer: 30000
+ });
+  }
+
+  function showmail() {
     var notify = $.notify('Murtaja92@hotmail.com', 
     { allow_dismiss: true,	type: 'danger', 	timer: 30000
  });
