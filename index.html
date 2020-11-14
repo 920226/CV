@@ -279,6 +279,11 @@
       cursor: pointer;
 
     }
+
+    .mfp-content {
+    width:auto;
+    height:300px;
+ }
   </style>
 
 
@@ -1264,7 +1269,7 @@ $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
 
     function getuinfo(id) {
 
-fetch("https://www.googleapis.com/youtube/v3/videos?id="+id+"&key=AIzaSyCi-UckgkNjRAx9Wqi2Q02MQMZ-IrhnGwg&part=snippet")
+fetch("https://www.googleapis.com/youtube/v3/videos?id="+id+"&key=AIzaSyCi-UckgkNjRAx9Wqi2Q02MQMZ-IrhnGwg&part=snippet&autoplay=1&origin=http://murtaja.tk")
   .then(res => res.json())
   .then((out) => {
     return out.items[0].channelTitle ;
@@ -1279,7 +1284,7 @@ return "error not recieve video title"
 
     $.each(substr, function (index, val) {
       var titel = "";
-      fetch("https://www.googleapis.com/youtube/v3/videos?id="+val+"&key=AIzaSyCi-UckgkNjRAx9Wqi2Q02MQMZ-IrhnGwg&part=snippet")
+      fetch("https://www.googleapis.com/youtube/v3/videos?id="+val+"&key=AIzaSyCi-UckgkNjRAx9Wqi2Q02MQMZ-IrhnGwg&part=snippet&autoplay=1&origin=http://murtaja.tk")
       .then(res => res.json())
       .then((out) => {
         titel = out.items[0].snippet.localized.title;
