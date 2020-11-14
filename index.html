@@ -1264,6 +1264,8 @@ return "error not recieve video title"
       .then(res => res.json())
       .then((out) => {
         titel = out.items[0].snippet.localized.title;
+        $("#v-pills-music").append('<img class="img-thumbnail" src="https://img.youtube.com/vi/'+val+'/0.jpg">');
+
       $("#v-pills-music").append('</br><a class="popup-youtube" href="https://www.youtube.com/watch?v=' + val + '">' + titel + '      </a>');
 
       }).catch(err => {
