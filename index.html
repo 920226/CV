@@ -29,6 +29,9 @@
       color: white;
     }
 
+    #v-pills-music > a{
+      color:white!important;
+    }
     .nav {
       background-color: #000000b8;
     }
@@ -1118,8 +1121,11 @@
       $("#v-pills-presentation").css("display", "unset");
     } 
     else if (e.target.id == "v-pills-music-tab") {
-      ytload();
-      ytload();
+      
+  waitForEl(".popup-youtube", function () {
+    ytload();
+
+  });
     }
       else {
       $("#v-pills-presentation").css("display", "none");
