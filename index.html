@@ -289,6 +289,9 @@
    background-color:rgba(0, 0, 0, 0.822);
    color:red;
  }
+ .minimize{
+  padding-top: 20px;font-size: 20px;border: none;left:0;top:-30px;position:absolute;z-index: 2046;
+ }
   </style>
 
 
@@ -1166,6 +1169,7 @@
 </script>
 <script>
 
+
 function ytload(){
   
 $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
@@ -1174,10 +1178,14 @@ $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
   mainClass: 'mfp-fade',
   removalDelay: 160,
   preloader: true,
+  closeMarkup: '<a title="%title%" class="minimize" type="button" onclick="$(`.mfp-bg`).css(`display`,`none`);$(`.mfp-wrap`).css(`display`,`none`);">minimera</a> <button  title="%title%" style="width:unset;" type="button" class="mfp-close">&#215;</button>',
 
   fixedContentPos: false
 
 });
+$('.popup-youtube').on('click',function(){
+        $(`.mfp-bg`).css(`display`,`unset`);$(`.mfp-wrap`).css(`display`,`unset`);
+      });
 }
     // <a class="popup-youtube" href="https://www.youtube.com/watch?v=8v_4O44sfjM">Christina Perri - Jar of Hearts [Official Music Video]            </a>
 
