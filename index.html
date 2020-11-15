@@ -1288,7 +1288,6 @@ $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
       , 'HS3pUgRKh_g'
       , 'EcLu2etbx6w'
       , 'rmHDhAohJlQ'
-      , '2-R26vNVj5w'
     ];
 
 
@@ -1352,7 +1351,6 @@ return "error not recieve video title"
       .then(res => res.json())
       .then((out) => {
         titel = out.items[0].snippet.localized.title;
-alert(val);
         $("#v-pills-series").append( `
         <div class="card popup-youtube"   href="https://www.youtube.com/watch?v=` + val + `">
   <img class="card-img-top" src="https://img.youtube.com/vi/`+val+`/0.jpg" alt="Card image cap">
@@ -1381,4 +1379,3 @@ alert(val);
 </script>
 
 </html>
-
