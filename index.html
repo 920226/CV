@@ -382,7 +382,7 @@
         <div class="nav flex-column nav-pills" style="width: 150px;" id="v-pills-tab" role="tablist"
           aria-orientation="vertical">
 
-          <img src="logo.png" class="rounded mx-auto d-block card-img-top" alt="...">
+          <img src="logo.png" style="    z-index: 1;" class="rounded mx-auto d-block card-img-top" alt="...">
           <audio autoplay controls>
             <source src="lama.mp3" type="audio/mpeg">
           </audio>
@@ -1008,9 +1008,7 @@
   crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
-  integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
-  crossorigin="anonymous"></script>
+<script src="jquery.magnific-popup.js"></script>
 
 <script src="https://apis.google.com/js/api.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
@@ -1179,12 +1177,13 @@ $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
   mainClass: 'mfp-fade',
   removalDelay: 160,
   preloader: false,
-
-  fixedContentPos: false
+  fixedContentPos: true
 
 });
-$('.popup-youtube').on('click',function(){
+
+$('.popup-youtube').on('click',function(e){
         $(`.mfp-bg`).css(`display`,`unset`);$(`.mfp-wrap`).css(`display`,`unset`);
+
       });
 }
     // <a class="popup-youtube" href="https://www.youtube.com/watch?v=8v_4O44sfjM">Christina Perri - Jar of Hearts [Official Music Video]            </a>
