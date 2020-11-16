@@ -1131,7 +1131,8 @@ $.magnificPopup.registerModule('image', {
 	options: {
 		markup: '<div class="mfp-figure">'+
 					'<div class="mfp-close"></div>'+
-				  	'<a class="minimize" type="button" onclick="$(`.mfp-bg`).css(`display`,`none`);$(`.mfp-wrap`).css(`display`,`none`);">minimera</a>'+
+					'<i class="fa fa-minus minimize" aria-hidden="true"   onclick="$(`.mfp-bg`).css(`display`,`none`);$(`.mfp-wrap`).css(`display`,`none`);"></i>'+
+
 					'<figure>'+
 						'<div class="mfp-img"></div>'+
 						'<figcaption>'+
@@ -1572,8 +1573,8 @@ $.magnificPopup.registerModule(IFRAME_NS, {
 	options: {
 		markup: '<div class="mfp-iframe-scaler">'+
 					'<div class="mfp-close"></div>'+
+					'<i class="fa fa-minus minimize" aria-hidden="true"   onclick="$(`.mfp-bg`).css(`display`,`none`);$(`.mfp-wrap`).css(`display`,`none`);"></i>'+
 
-					'<a class="minimize" type="button" onclick="$(`.mfp-bg`).css(`display`,`none`);$(`.mfp-wrap`).css(`display`,`none`);">minimera</a>'+
 
 					'<iframe class="mfp-iframe" src="//about:blank" frameborder="0" allowfullscreen></iframe>'+
 				'</div>',
