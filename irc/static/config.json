@@ -21,7 +21,7 @@
         "port":6697,
         "tls":true,
         "channel": "#murre",
-        "nick": "murre-n?"
+        "nick": "mourre-n?"
     },
     "embedly": {
         "key": ""
