@@ -1123,19 +1123,21 @@ function telloffer() {
     });
   }
 
-  function show2(){
+  function hide(){
+    $("#v-pills-series").css("display", "none");
+$("#v-pills-music").css("display", "none");
+$('#notsupported').modal()
 
   }
   function show() {
     $('#v-pills-presentation-tab').css('display', 'unset');
     $('#v-pills-presentation').css('display', 'unset');
-show2();
+
     
   }
   function myFunction() {
     if ((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1) {
-      $('#notsupported').modal()
-
+      hide();
     }
     else if (navigator.userAgent.indexOf("Chrome") != -1) {
       show();
@@ -1149,13 +1151,13 @@ show2();
 
     }
     else if ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) //IF IE > 10
-    {
-      $('#notsupported').modal()
+    {      hide();
+
 
 
     }
-    else {
-      $('#notsupported').modal()
+    else {      hide();
+
 
     }
   }
