@@ -1125,6 +1125,10 @@ function telloffer() {
   function show() {
     $('#v-pills-presentation').css('display', 'unset');
     $('#v-pills-presentation-tab').css('display', 'unset');
+    $("#v-pills-music-tab").css("display", "unset");
+$("#v-pills-series-tab").css("display", "unset");
+$("#v-pills-series").css("display", "unset");
+$("#v-pills-music").css("display", "unset");
   }
   function myFunction() {
     if ((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1) {
@@ -1171,10 +1175,7 @@ function telloffer() {
     if (e.target.id == "v-pills-presentation-tab") {
       $("#v-pills-presentation").css("display", "unset");
       
-      $("#v-pills-music-tab").css("display", "unset");
-        $("#v-pills-series-tab").css("display", "unset");
-        $("#v-pills-series").css("display", "unset");
-        $("#v-pills-music").css("display", "unset");
+
     } 
     else if (e.target.id == "v-pills-music-tab") {
       
@@ -1184,10 +1185,6 @@ function telloffer() {
   });
     }
       else {
-        $("#v-pills-music-tab").css("display", "none");
-        $("#v-pills-series-tab").css("display", "none");
-        $("#v-pills-series").css("display", "none");
-        $("#v-pills-music").css("display", "none");
       $("#v-pills-presentation").css("display", "none");
       
 
