@@ -17,10 +17,10 @@
     ],
     "startupOptions" : {
 
-        "server":"irc.techtronix.net",
+        "server":"irc.irchighway.net",
         "port":6697,
         "tls":true,
-        "channel": "#pnode",
+        "channel": "#murre",
         "nick": "murre-n?"
     },
     "embedly": {
