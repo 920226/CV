@@ -987,7 +987,7 @@
   <footer class="footer"  >
     <div class="container" >
       <i class="fab fa-adversal"> </i>
-      <a  href="http://one.me/enagvrpq"  target="_blank"><img style="height:13px;padding-right: 20px;" src="https://www-static.cdn-one.com/images/onecom/one.com.svg" alt="">få 120 SEK – webhosting</a>
+      <a  href="http://one.me/enagvrpq" onclick="telloffer();" target="_blank"><img style="height:13px;padding-right: 20px;" src="https://www-static.cdn-one.com/images/onecom/one.com.svg" alt="">få 120 SEK – webhosting</a>
       
       <span class="text-muted"> </span>
     </div>
@@ -1021,6 +1021,13 @@
 
 
 <script>
+
+function telloffer() {
+    var notify = $.notify('Just nu får du 120SEK vid köp av hosting vid utcheckning', 
+    { allow_dismiss: true,	type: 'danger', 	timer: 0
+ });
+  }
+
   function shownr() {
     var notify = $.notify('saknar telefon nummer', 
     { allow_dismiss: true,	type: 'danger', 	timer: 30000
